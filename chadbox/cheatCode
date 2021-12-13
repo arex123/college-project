@@ -1,0 +1,11 @@
+1: copy html,css files from github-https://github.com/bradtraversy/chatcord
+
+2: make package.json file/ or initialize npm
+    npm init
+
+2: npm i express socket.io moment
+
+3: change some scripts to start
+
+
+_: 'qs cdn' to grab object from url
