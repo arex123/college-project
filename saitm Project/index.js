@@ -36,6 +36,7 @@ app.use(session({
 
 
 
+
 app.use(express.urlencoded({ extended: true }));
 
 // app.use(express.static('public'));
@@ -315,27 +316,24 @@ app.get('/classroom',checkSession,function(req,res){
             console.log(err);
         }else{
 
-            console.log("user ",user);
+            console.log("user  hello",user);
             
             let sem = user.Sem;
             let Branch = user.Branch;
             let course = user.Course;
             console.log(sem," ",Branch," ",course);
+            
+            
+            //json file reading
+            
+            // let buffer = fs.readFileSync("./data.json");
+            // let data = JSON.parse(buffer);
+            // console.log("daa",data[course][Branch][sem].subjects);
+            // let obj = data[course][Branch][sem].subjects;
+            // console.log(obj.length);
             res.render('classroom.ejs',{ user});
 
-            // fs.readFile('data.json',(err,dat)=>{
-            //     if(err) throw err;
-            //     let students = JSON.parse(dat);
-
-            //     let obj = students.Btech.cse.seven.theory;
-
-                
-            //      for(const key in obj) {
-            //          console.log(`${key}`); // `${key}: ${user[key]}
-            //     }
-            //     res.render('classroom.ejs',{obj:obj});
-
-            // })
+            
          }
 
     });
@@ -502,6 +500,39 @@ app.get('/',(req,res) =>{
     res.render('login.html');
 
 });
+
+app.get('/subdata',(req,res)=>{
+
+    db.collection('details').findOne({ email: req.session.email }, function(err, user){
+        if(err){
+            console.log(err);
+        }else{
+
+            console.log("user  hello",user);
+            
+            let sem = user.Sem;
+            let Branch = user.Branch;
+            let course = user.Course;
+            console.log(sem," ",Branch," ",course);
+            
+            
+            //json file reading
+            
+            let buffer = fs.readFileSync("./data.json");
+            let data = JSON.parse(buffer);
+            // console.log("daa",data[course][Branch][sem].subjects);
+            let obj = data[course][Branch][sem].subjects;
+            // console.log(obj.length);
+            // res.render('classroom.ejs',{ user,obj});
+            res.send(JSON.stringify(obj));
+            
+         }
+
+    });
+
+
+
+})
 
 
 //char room

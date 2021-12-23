@@ -107,7 +107,7 @@ body{
 .left,.right{
     flex:1;
     margin: 0px 100px;
-    border: 1px solid red;
+    border: 1px solid rgb(24, 22, 22);
     height: 250px;
     
 }
@@ -149,4 +149,19 @@ body{
   display: none;
   background-color: white;
   overflow: hidden;
+}
+.subs{
+  padding:0 18px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items:flex-start;
+  margin: 10px;
+  padding: 10px;
+}
+
+.subs:hover{
+  background-color: rgb(167, 161, 161);
+  /* cursor: pointer; */
 }

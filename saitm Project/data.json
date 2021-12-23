@@ -1,7 +1,7 @@
 {
     "Btech": {
       "cse": {
-        "one": {
+        "1": {
           "English": {
             "syllabus": "eng syllabus link",
             "notes": {
@@ -43,7 +43,7 @@
             "QP": "QP links"
           }
         },
-        "two": {
+        "2": {
           "Chemistry": {
             "syllabus": "eng syllabus link ",
             "notes": {
@@ -85,7 +85,7 @@
             "QP": "QP links"
           }
         },
-        "three": {
+        "3": {
           "theory": {
             "DBMS": {
               "syllabus": "eng syllabus link ",
@@ -191,8 +191,8 @@
             }
           }
         },
-        "four": {
-          "theory": {
+        "4": {
+          "subjects": {
             "Discrete Mathematics": {
               "syllabus": "eng syllabus link ",
               "notes": {
@@ -287,13 +287,23 @@
             }
           }
         },
-        "five": {
-          "theory": {
-            "computer networks": {},
-            "DAA": {},
-            "programming in java": {},
-            "Web Technologies": {},
-            "Signals and systems": {}
+        "5": {
+          "subjects": {
+            "computer networks": {
+              "notes":"notes link nn"
+            },
+            "DAA": {
+              "notes":"notes link nn"
+            },
+            "programming in java": {
+              "notes":"notes link nn"
+            },
+            "Web Technologies": {
+              "notes":"notes link nn"
+            },
+            "Signals and systems": {
+              "notes":"notes link nn"
+            }
           },
           "practicals": {
             "CN labs": {},
@@ -302,7 +312,7 @@
             "wt lab": {}
           }
         },
-        "six": {
+        "6": {
           "theory": {
             "AI": {},
             "MWC": {},
@@ -315,8 +325,26 @@
             "Advanced java labs": {}
           }
         },
-        "seven": {
-            "subjects":["NN","Web Mining","Network security and cryptography","English for Professionals"],
+        "7": {
+            "subjects":{
+
+            "Neural Network" : { 
+              "notes":"notes link nn"
+
+            }
+            ,"Web Mining" : { 
+              "notes":"anchor tag"
+
+            }
+            ,"Network security and cryptography" : { 
+              "notes":"anchor tag"
+
+            }
+            ,"English for Professionals" : { 
+              "link1":"anchor tag"
+
+            }
+            },
             "theory subjects":["NN labs"],
             "content":["syllabus","notes","QP" ],
             "notes":["unit 1","unit 2","unit 3","unit 4"],
@@ -375,7 +403,7 @@
                 }
           }
         },
-        "eight": {
+        "8": {
           "theory": {
             "Machine Learning": {},
             "Big Data Analytics": {},
